@@ -79,18 +79,21 @@ body {
     color: #D5D4D8;
 }
 
-.service-display {
-    display: flex;
-    justify-content: space-between;
+#service-display {
     margin-top: 10px;
     padding: 10px 0 10px 0;
     border-bottom: 2px solid #C3C6DB;
 }
 
-.service-display span {
+#service-display span {
     color: #918E9B;
     font-weight: 400;
     font-size: 24px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .service-name {
