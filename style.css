@@ -19,7 +19,6 @@ body {
     background-color: #1C1C1C;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-
 }
 
 .card {
@@ -32,11 +31,8 @@ body {
     padding: 50px;
     background-color: #3A69D2;
     text-align: center; 
-    /* border: 5px solid red; */
     font-weight: 400;
-    font-size: 16px;
-
-    
+    font-size: 16px;   
 }
 
 .title h1 {
@@ -65,7 +61,7 @@ body {
 }
 
 .service-wrapper,
-.total-display {
+.total-wrapper{
     padding: 0 85px;
     margin: 10px 0;
 }
@@ -77,6 +73,25 @@ body {
     font-weight: 700;
     font-size: 12px;
     color: #D5D4D8;
+}
+
+#total-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.payment-message {
+    color: #F5F5F5;
+    font-size: 12px;
+    font-weight: 400;   
+}
+
+.total-value {
+    color: #F5F5F5;
+    font-size: 36px;
+    font-weight: 600;
 }
 
 #service-display {
@@ -94,6 +109,7 @@ body {
 .service-container {
     display: flex;
     justify-content: space-between;
+    padding: 5px 0;
 }
 
 .service-name {
