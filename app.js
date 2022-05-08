@@ -1,10 +1,10 @@
 let chosenService = []
 
-
 const washBtn = document.getElementById("wash-btn")
 const mowBtn = document.getElementById("mow-btn")
 const pullWeeds = document.getElementById("pull-weed-btn")
 const serviceDisplay = document.getElementById("service-display")
+const totalDisplay = document.getElementById("total-display")
 
 
 washBtn.addEventListener("click", function(){
@@ -13,7 +13,9 @@ washBtn.addEventListener("click", function(){
     }
     chosenService.push(serviceClicked)
     washBtn.disabled = true;
-    display()
+    displayChoices()
+    calcTotal()
+ 
 }) 
 
 
@@ -23,7 +25,9 @@ mowBtn.addEventListener("click", function(){
 } 
     chosenService.push(serviceClicked)
     mowBtn.disabled = true;
-    display()
+    displayChoices()
+    calcTotal()
+
 })
 
 pullWeeds.addEventListener("click", function(){
@@ -32,10 +36,11 @@ pullWeeds.addEventListener("click", function(){
 } 
     chosenService.push(serviceClicked)
     pullWeeds.disabled = true;
-    display()
+    displayChoices()
+    calcTotal()
 })
 
-function display() {
+function displayChoices() {
     let display = ""
     for (let i = 0; i < chosenService.length; i++) {
         display += `
@@ -48,3 +53,17 @@ function display() {
     serviceDisplay.innerHTML = display
 
 }
+
+function calcTotal() {
+    let calc = 0
+    let amountDisplay =""
+    for (let i = 0; i < chosenService.length; i++) {
+        calc += chosenService[i].value
+        amountDisplay = `
+        <div class="payment-message">We accept cash, credit card, or PayPal</div>
+        <div class="total-value"><span>$</span>${calc}</div>
+    ` 
+    }  
+    totalDisplay.innerHTML = amountDisplay
+}
+
