@@ -75,26 +75,10 @@ body {
     color: #D5D4D8;
 }
 
-#total-display {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.payment-message {
-    color: #F5F5F5;
-    font-size: 12px;
-    font-weight: 400;   
-}
-
-.total-value {
-    color: #F5F5F5;
-    font-size: 36px;
-    font-weight: 600;
-}
-
 #service-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-top: 10px;
     padding: 10px 0 10px 0;
     border-bottom: 2px solid #C3C6DB;
@@ -123,3 +107,34 @@ body {
     font-weight: 500;
     color: #F5F5F5;
 }
+
+.remove-item {
+    border-style: none;
+    background: none;
+    margin-right: 220px;
+    color: #D5D4D8;
+    font-weight: 400;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+#total-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.payment-message {
+    color: #F5F5F5;
+    font-size: 12px;
+    font-weight: 400;   
+}
+
+.total-value {
+    color: #F5F5F5;
+    font-size: 36px;
+    font-weight: 600;
+}
+
