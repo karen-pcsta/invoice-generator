@@ -15,7 +15,7 @@ washBtn.addEventListener("click", function(){
     washBtn.disabled = true;
     displayChoices()
     calcTotal()
- 
+    
 }) 
 
 
@@ -46,17 +46,20 @@ function displayChoices() {
         display += `
         <div class="service-container">
             <div class="service-name">${chosenService[i].service}</div>
+            <button class="remove-item" onclick= "removeItem(${chosenService.indexOf(chosenService[i])})">Remove</button>
             <div class="service-value"><span>$</span>${chosenService[i].value}</div>
         </div>
        `
+    //    check if the index is correct at each iteration:
+    //    console.log(chosenService.indexOf(chosenService[i]))
     }
     serviceDisplay.innerHTML = display
-
+    
 }
 
 function calcTotal() {
     let calc = 0
-    let amountDisplay =""
+    let amountDisplay = ""
     for (let i = 0; i < chosenService.length; i++) {
         calc += chosenService[i].value
         amountDisplay = `
@@ -66,4 +69,12 @@ function calcTotal() {
     }  
     totalDisplay.innerHTML = amountDisplay
 }
+
+
+function removeItem(index) {
+    chosenService.splice(index, 1)
+    displayChoices()
+    calcTotal()
+}
+
 
