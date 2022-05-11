@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: #1C1C1C;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
@@ -60,14 +61,23 @@ body {
     cursor: pointer;
 }
 
+.btn-wrapper button:hover {
+    background-color: #b1b5e4;
+}
+
+.btn-wrapper button:active {
+    background-color: #3A69D2;
+    color: #FFFFFF;
+  }
+
 .service-wrapper,
-.total-wrapper{
+.total-wrapper {
     padding: 0 85px;
     margin: 10px 0;
 }
 
-.service-header,
-.total-display-header {
+.service-title,
+.total-display-title {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
@@ -75,16 +85,16 @@ body {
     color: #D5D4D8;
 }
 
-#service-display {
+.service-display {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 10px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     border-bottom: 2px solid #C3C6DB;
 }
 
-#service-display span {
+.service-display span {
     color: #918E9B;
     font-weight: 400;
     font-size: 24px;
@@ -119,7 +129,7 @@ body {
 }
 
 
-#total-display {
+.total-display {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,3 +148,33 @@ body {
     font-weight: 600;
 }
 
+.send-btn {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 140px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #3A69D2;
+    color:#FFFFFF ;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #3762c1;
+}
+
+.send-btn:active {
+    background-color: #1b449c;
+}
+
+
+.mail-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
+}
