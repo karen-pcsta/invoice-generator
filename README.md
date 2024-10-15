@@ -11,10 +11,6 @@ O "Invoice Generator" é uma aplicação que facilita a criação e gerenciament
 
 **Personalização**: Customize a aparência das faturas com logotipo e informações da empresa.
 
-**Exportação**: Exporte as faturas em formato PDF para fácil compartilhamento.
-
-**Armazenamento**: Salve e gerencie faturas diretamente na aplicação.
-
 
 ## Ferramentas
 
